@@ -1,0 +1,53 @@
+{
+  "lastfm_user": {
+    "description": "Last.fm 用户名",
+    "type": "string",
+    "default": "",
+    "obvious_hint": true,
+    "hint": "Last.fm 主页地址栏里的名字，例如 https://www.last.fm/user/abc123 中的 abc123"
+  },
+  "lastfm_api_key": {
+    "description": "Last.fm API Key",
+    "type": "string",
+    "default": "",
+    "secret": true,
+    "obvious_hint": true,
+    "hint": "到 https://www.last.fm/api/account/create 申请。只需要 API key，不需要 shared secret。"
+  },
+  "poll_interval": {
+    "description": "轮询间隔（秒）",
+    "type": "int",
+    "default": 90,
+    "hint": "多久查询一次 Last.fm。建议 60～120；过小可能被限流，过大换歌反应会变慢。"
+  },
+  "context_messages": {
+    "description": "生成搭话时携带的对话条数",
+    "type": "int",
+    "default": 12,
+    "hint": "主动搭话时会读取最近这么多条聊天记录，让它接得上你们正在聊的话题。设为 0 则不携带上下文（不推荐）。"
+  },
+  "idle_timeout": {
+    "description": "自动结束的空闲时长（秒）",
+    "type": "int",
+    "default": 600,
+    "hint": "连续这么久检测不到在播放，就自动结束陪听。默认 600 秒（10 分钟）。"
+  },
+  "only_private_chat": {
+    "description": "只响应私聊",
+    "type": "bool",
+    "default": true,
+    "hint": "开启后群里发送触发词不会生效，避免收听记录被公开。建议保持开启。"
+  },
+  "allowed_users": {
+    "description": "允许使用的用户 ID 白名单",
+    "type": "list",
+    "default": [],
+    "hint": "留空表示不限制（仍受「只响应私聊」约束）。填写后仅列表内的用户可触发。"
+  },
+  "system_prompt": {
+    "description": "陪听时的人格提示",
+    "type": "text",
+    "default": "你是陪我听歌的朋友。不要复读歌名，不要用'这是一首……的歌曲'这种腔调，也不要说'很好听''很经典'这类空话。用两三句话说你听到它想到的具体画面、情绪或某个瞬间，像朋友随口聊天。不知道的信息不要编，尤其不要编歌词。",
+    "hint": "每次主动搭话时使用。留空则使用内置默认值。"
+  }
+}
