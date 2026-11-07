@@ -1,8 +1,25 @@
 name: astrbot_plugin_listen_with_me
 display_name: 陪我听歌
-short_desc: 说"陪我听会儿歌"，机器人通过 Last.fm 跟踪你正在听什么并时不时搭话。
-desc: 发送"陪我听会儿歌"开始陪听，之后持续通过 Last.fm 检测你在听的歌，换歌时主动说一句；一段时间检测不到在听会自动结束。
-version: v1.1.0
-author: 用户自建
-repo: ""
+short_desc: 说一句「陪我听会儿歌」，机器人通过 Last.fm 跟踪你正在听什么，换歌时自然接话而不是播报歌名。
+desc: |
+  发送「陪我听会儿歌」开始陪听。插件会持续通过 Last.fm 检测你正在播放的歌曲，
+  换歌时结合最近的聊天记录自然地接一句话，而不是干巴巴地播报歌名。
+
+  你也可以随时问「我在听什么」「刚才那首叫什么」，它会实时查询后回答。
+  连续一段时间检测不到播放时自动结束，全程无需手动干预。
+
+  **特性**
+
+  - 不播放、不下载任何音频，只读取 Last.fm 的公开曲目元数据
+  - 默认只响应私聊，避免收听记录在群聊中泄露
+  - 搭话会写入对话历史，后续对话上下文连贯
+  - 网络异常不计入空闲时间，不会因临时断网误判退出
+version: 1.1.0
+author: Stanstunn
+repo: https://github.com/Stanstunn/astrbot_plugin_listen_with_me
 astrbot_version: ">=4.14"
+social_link: https://github.com/Stanstunn
+tags:
+  - 音乐
+  - 陪伴
+  - lastfm
