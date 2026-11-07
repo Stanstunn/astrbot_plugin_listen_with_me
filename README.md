@@ -444,7 +444,7 @@ AstrBot 本体以 **AGPL-3.0-or-later** 发布，本插件通过其插件 API �
 - [AstrBot](https://github.com/AstrBotDevs/AstrBot) —— 插件运行框架
 - [Pano Scrobbler](https://github.com/kawaiiDango/pano-scrobbler) —— Android 端开源 scrobbler
 - [Last.fm](https://www.last.fm) —— 播放数据接口
-- 代码借助DeepSeek生成
+- 代码借助 DeepSeek 生成
 
 ---
 
